@@ -10,14 +10,16 @@
     <header>
         <h1>Work Allotment</h1>
     </header>
+    <!-- wno	empno	vcode	des	entdate -->
     <section>
         <div class="option">
-            <form action="validate_contractor.php" method="post">
-                <input type="text" name="wid" placeholder="Enter Your Work ID">
-                <input type="text" name="emppassword" placeholder="Enter Your Emp No">
-                <input type="text" name="empno" placeholder="Enter Your Vendor Code">
-                <input type="text" name="emppassword" placeholder="Enter Your Description">
-                <button type="submit">SUBMIT</button>
+            <form action="work_order.php" method="post">
+                <input type="text" name="wno" placeholder="Enter Your Work ID">
+                <input type="text" name="empno" placeholder="Enter Your Emp No">
+                <input type="text" name="vcode" placeholder="Enter Your Vendor Code">
+                <input type="text" name="des" placeholder="Enter Your Description">
+                <input type="date" name="entdate" id="" placeholder="Enter Entry Date">
+                <button type="submit" name="submit">SUBMIT</button>
                 <!-- need to change name attr -->
             </form>
             <!-- <a href="#"><button id="r_cd">Register as Contractor</button></a> -->
@@ -76,4 +78,6 @@
     }
     
 </style>
+<!-- CREATE TABLE workallot( wno varchar(25), empno varchar(25), vcode varchar(25), des varchar(255), PRIMARY KEY (wno), FOREIGN KEY (empno) REFERENCES employee(empno), FOREIGN KEY (vcode) REFERENCES vendor(vcode) ); -->
+
 </html>
