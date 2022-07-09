@@ -1,7 +1,7 @@
 
 
 <?php
-include_once 'db.php';
+include_once '../db.php';
 if(isset($_POST['submit']))
 {    
     $wno = $_POST['wno'];
@@ -10,7 +10,7 @@ if(isset($_POST['submit']))
     $des= $_POST['des'];
     $entdate= $_POST['entdate'];
 
-    $sql = "insert into workallot (wno,empno,vcode,des) values('$wno','$empno','$vcode','$des')";
+    $sql = "insert into workallot (wno,empno,vcode,des,entdate) values('$wno','$empno','$vcode','$des','$entdate')";
      
      if (mysqli_query($con, $sql)) {
         echo "New record has been added successfully !";

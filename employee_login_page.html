@@ -8,28 +8,24 @@
 </head>
 <body>
     <header>
-        <h1>Work Allotment</h1>
+        <h1>Login as Employee</h1>
     </header>
     <section>
         <div class="option">
-            <form action="item.php" method="post">
-                <input type="text" name="wno" placeholder="WORK NO.">
-                <input type="text" name="item_no" placeholder="ITEM NO.">
-                <input type="text" name="item_desc" placeholder="DESC">
-                <input type="text" name="qty" placeholder="QUANTITY">
-                <input type="text" name="unit" placeholder="UNIT">
-                <button type="submit" name="submit">SUBMIT</button>
-                <!-- need to change name attr -->
+            <form action="validate_contractor.php" method="post">
+                <input type="text" name="empno" placeholder="Enter Your CID">
+                <input type="password" name="emppassword" placeholder="Enter Your Password">
+                <button type="submit">SUBMIT</button>
             </form>
             <!-- <a href="#"><button id="r_cd">Register as Contractor</button></a> -->
         </div>
     </section>
 </body>
 <style>
-    *{
-        background-color: rgb(200, 215, 215);
-    }
-
+    /* *{
+        background-color: rgb(73, 71, 71);
+        color: azure;
+    } */
     header{
         display: flex;
         justify-content: center;
@@ -39,8 +35,7 @@
         display: flex;
         justify-content: center;
         position: relative;
-        margin-top: 4em;
-        
+        margin-top: 3rem;
     }
     .option{
         display: grid;
@@ -50,9 +45,8 @@
     form{
         border: 2px solid black;
         padding-top: 3em;
-        padding: 6em 3em 3em 2em;
+        padding: 5em 3em 1em 3em;
         display: grid;
-        background-color: whitesmoke;
     }
     button{
         width: 20em;
@@ -60,13 +54,15 @@
         margin: 2em;
         margin-left: 5.4em;
         /* border-radius: 8em; */
-        background-color: rgb(43, 71, 6);
+        background-color: green;
         color: aliceblue;
+    }
+    button:hover{
+        background-color: rgb(8, 69, 8);
     }
     input{
         margin-bottom: 1rem;
         padding: 2em 10em;
-        background-color: whitesmoke;
     }
     #r_cd{
         width: 30em;

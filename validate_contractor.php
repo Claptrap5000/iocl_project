@@ -30,9 +30,9 @@ $result = mysqli_query($con, $s);
 $num = mysqli_num_rows($result);
 
 if($num == 1){
-    header('location:home.html');
+    header('location: Home/employee_home.html');
 }
 else{
-    header('location:contractor_login_page.html');
+    header('location:employee_login_page.html');
 }
 ?>

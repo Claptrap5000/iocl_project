@@ -8,34 +8,38 @@
 </head>
 <body>
     <header>
-        <h1>Login as Employee</h1>
+        <h1>Work Allotment</h1>
     </header>
     <section>
         <div class="option">
-            <form action="validate_contractor.php" method="post">
-                <input type="text" name="empno" placeholder="Enter Your CID">
-                <input type="password" name="emppassword" placeholder="Enter Your Password">
-                <button type="submit">SUBMIT</button>
+            <form action="enter_data.php" method="post">
+                <input type="text" name="wno" placeholder="Enter Your Work ID">
+                <input type="text" name="item_no" placeholder="Enter Your Item No">
+                <input type="text" name="dn_qty" placeholder="Enter Quantity">
+                <!-- <input type="date" name="entry_date" id=""> -->
+                <input class="textbox-n" type="text" onfocus="(this.type = 'date')" name="entry_date" placeholder="Enter Delivered Date">
+                
+                <button type="submit" name="submit">SUBMIT</button>
+                <!-- need to change name attr -->
             </form>
-            <!-- <a href="#"><button id="r_cd">Register as Contractor</button></a> -->
         </div>
     </section>
 </body>
 <style>
-    /* *{
-        background-color: rgb(73, 71, 71);
-        color: azure;
-    } */
+    *{
+        background-color: rgb(200, 215, 215);
+    }
+
     header{
         display: flex;
         justify-content: center;
-        margin-top: 2em;
+        margin-top: 1.5rem;
     }
     section{
         display: flex;
         justify-content: center;
         position: relative;
-        margin-top: 3rem;
+        margin-top: 2em; 
     }
     .option{
         display: grid;
@@ -45,8 +49,9 @@
     form{
         border: 2px solid black;
         padding-top: 3em;
-        padding: 5em 3em 1em 3em;
+        padding: 4.3rem 3rem 1rem 3rem;
         display: grid;
+        background-color: whitesmoke;
     }
     button{
         width: 20em;
@@ -60,6 +65,7 @@
     input{
         margin-bottom: 1rem;
         padding: 2em 10em;
+        background-color: whitesmoke;
     }
     #r_cd{
         width: 30em;
@@ -70,4 +76,5 @@
     }
     
 </style>
+
 </html>

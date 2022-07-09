@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Item Allotment</h1>
+    </header>
+    
+<!-- wno	item_no	item_desc	item_qty	item_unit -->
+    <section>
+        <div class="option">
+            <form action="item.php" method="post">
+                <input type="text" name="wno" placeholder="WORK NO.">
+                <input type="text" name="item_no" placeholder="ITEM NO.">
+                <input type="text" name="item_desc" placeholder="DESC">
+                <input type="text" name="item_qty" placeholder="QUANTITY">
+                <input type="text" name="item_unit" placeholder="UNIT">
+                <button type="submit" name="submit">SUBMIT</button>
+                <!-- need to change name attr -->
+            </form>
+            <!-- <a href="#"><button id="r_cd">Register as Contractor</button></a> -->
+        </div>
+    </section>
+</body>
+<style>
+    *{
+        background-color: rgb(200, 215, 215);
+    }
+
+    header{
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5em;
+    }
+    section{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin-top: 2em;
+        
+    }
+    .option{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    form{
+        border: 2px solid black;
+        padding-top: 3em;
+        padding: 4.5em 3em 1em 3em;
+        display: grid;
+        background-color: whitesmoke;
+    }
+    button{
+        width: 20em;
+        padding: 2em;
+        margin: 2em;
+        margin-left: 5.4em;
+        /* border-radius: 8em; */
+        background-color: rgb(43, 71, 6);
+        color: aliceblue;
+    }
+    input{
+        margin-bottom: 1rem;
+        padding: 2em 10em;
+        background-color: whitesmoke;
+    }
+    #r_cd{
+        width: 30em;
+        padding: 1em;
+        margin: 1em;
+        margin-left: 0.4em;
+        background-color: blue;
+    }
+    
+</style>
+</html>
