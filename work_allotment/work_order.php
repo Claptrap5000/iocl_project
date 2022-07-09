@@ -1,5 +1,3 @@
-
-
 <?php
 include_once '../db.php';
 if(isset($_POST['submit']))
@@ -12,10 +10,19 @@ if(isset($_POST['submit']))
 
     $sql = "insert into workallot (wno,empno,vcode,des,entdate) values('$wno','$empno','$vcode','$des','$entdate')";
      
-     if (mysqli_query($con, $sql)) {
-        echo "New record has been added successfully !";
+   
+   if (mysqli_query($con, $sql)) 
+   {
+      echo '<script>
+               location.replace("work_order.html");
+               alert("New record has been added successfully ");
+            </script>';
      } else {
         echo "Error: " . $sql . ":-" . mysqli_error($con);
+        echo '<script>
+               location.replace("work_order.html");
+               alert("Error foun in Your Entry!");
+            </script>';
      }
      mysqli_close($con);
 }

@@ -12,9 +12,17 @@ if(isset($_POST['submit']))
      $sql = "insert into item_allot (wno,item_no,item_desc,item_qty,item_unit) values('$wno','$item_no','$item_desc','$item_qty','$item_unit')";
      
      if (mysqli_query($con, $sql)) {
-        echo "New record has been added successfully !";
+      //   echo "New record has been added successfully !";
+        echo '<script>
+               location.replace("item.html");
+               alert("New record has been added successfully ");
+            </script>';
      } else {
         echo "Error: " . $sql . ":-" . mysqli_error($con);
+        echo '<script>
+               location.replace("item.html");
+               alert("Error foun in Your Entry!");
+            </script>';
      }
      mysqli_close($con);
 }

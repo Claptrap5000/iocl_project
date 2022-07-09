@@ -11,9 +11,17 @@
         $sql = "insert into entry_table (wno,item_no,dn_qty,entry_date) values('$wno','$item_no','$dn_qty','$entry_date')";
      
         if (mysqli_query($con, $sql)) {
-            echo "New record has been added successfully !";
+            // echo "New record has been added successfully !";
+            echo '<script>
+               location.replace("enter_data.html");
+               alert("New record has been added successfully ");
+            </script>';
         } else {
             echo "Error: " . $sql . ":-" . mysqli_error($con);
+            echo '<script>
+               location.replace("enter_data.html");
+               alert("Error foun in Your Entry!");
+            </script>';
         }
 
         mysqli_close($con);
