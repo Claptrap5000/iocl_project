@@ -5,12 +5,12 @@ include_once 'db.php';
 if(isset($_POST['submit']))
 {    
     $wno = $_POST['wno'];
-    $item_no = $_POST['item_no'];
-    $item_desc = $_POST['item_desc'];
-    $qty= $_POST['qty'];
-    $unit= $_POST['unit'];
+    $empno = $_POST['empno'];
+    $vcode = $_POST['vcode'];
+    $des= $_POST['des'];
+    $entdate= $_POST['entdate'];
 
-     $sql = "insert into item_2 (wno,item_no,item_desc,qty,unit) values('$wno','$item_no','$item_desc','$qty','$unit')";
+    $sql = "insert into workallot (wno,empno,vcode,des) values('$wno','$empno','$vcode','$des')";
      
      if (mysqli_query($con, $sql)) {
         echo "New record has been added successfully !";

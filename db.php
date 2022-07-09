@@ -1,10 +1,15 @@
 <?php
+
     $servername='localhost';
     $username='root';
     $password='';
     $dbname = "iocl";
-    $conn=mysqli_connect($servername,$username,$password,"$dbname");
-      if(!$conn){
+
+    $con=mysqli_connect($servername,$username,$password,$dbname);
+    
+
+    if(!$con){
+
           die('Could not Connect MySql Server:' .mysql_error());
         }
 ?>

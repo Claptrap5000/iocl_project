@@ -8,15 +8,13 @@
 </head>
 <body>
     <header>
-        <h1>Enter Work Details</h1>
+        <h1>Login as Employee</h1>
     </header>
     <section>
         <div class="option">
             <form action="validate_contractor.php" method="post">
                 <input type="text" name="empno" placeholder="Enter Your CID">
                 <input type="password" name="emppassword" placeholder="Enter Your Password">
-                <input type="text" name="empno" placeholder="Enter Your CID">
-                <input type="text" name="empno" placeholder="Enter Your CID">
                 <button type="submit">SUBMIT</button>
             </form>
             <!-- <a href="#"><button id="r_cd">Register as Contractor</button></a> -->
@@ -24,7 +22,10 @@
     </section>
 </body>
 <style>
-
+    /* *{
+        background-color: rgb(73, 71, 71);
+        color: azure;
+    } */
     header{
         display: flex;
         justify-content: center;
@@ -34,7 +35,7 @@
         display: flex;
         justify-content: center;
         position: relative;
-        margin-top: 10%;
+        margin-top: 3rem;
     }
     .option{
         display: grid;
@@ -44,7 +45,7 @@
     form{
         border: 2px solid black;
         padding-top: 3em;
-        padding: 7em 3em 3em 3em;
+        padding: 5em 3em 1em 3em;
         display: grid;
     }
     button{
