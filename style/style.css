@@ -23,7 +23,9 @@ form{
     border: 2px solid black;
     padding: 3em 2em 1em 2em;
     display: grid;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
+    /* background-color: floralwhite; */
+    background-color: rgb(231, 16, 16);
 }
 button{
     width: 20em;
@@ -47,4 +49,7 @@ input{
     margin: 1em;
     margin-left: 0.4em;
     background-color: blue;
+}
+label{
+    background-color: white;
 }
