@@ -55,13 +55,13 @@
     form{
         padding: 4.5em 3em 1em 3em;
     }
-    label{
+    /* label{
         background-color: white;
         margin: auto;
     }
     .selection{
         background-color: white;
-    }
+    } */
     #sel_wno{
         padding: 2em 15em;
         margin-bottom :1em;

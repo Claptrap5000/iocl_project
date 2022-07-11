@@ -83,13 +83,6 @@
         margin-bottom :1em;
         background-color: white;
     }
-    label{
-        background-color: white;
-        margin: auto;
-    }
-    .selection{
-        background-color: white;
-    }
 
 </style>
 

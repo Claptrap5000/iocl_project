@@ -83,13 +83,13 @@
         margin-bottom :1em;
         background-color: white;
     }
-    label{
+    /* label{
         background-color: white;
         margin: auto;
     }
     .selection{
         background-color: white;
-    }
+    } */
 </style>
 <!-- CREATE TABLE workallot( wno varchar(25), empno varchar(25), vcode varchar(25), des varchar(255), PRIMARY KEY (wno), FOREIGN KEY (empno) REFERENCES employee(empno), FOREIGN KEY (vcode) REFERENCES vendor(vcode) ); -->
 
