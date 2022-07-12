@@ -7,7 +7,7 @@
 	<body> 
 	<table align="center" border="1px" style="width:600px; line-height:40px;"> 
 	<tr> 
-		<th colspan="4"><h2>ITEM TABLE</h2></th> 
+		<th colspan="5"><h2>ITEM TABLE</h2></th> 
 		</tr> 
 			  <th> work no. </th> 
 			  <th> item no. </th> 
@@ -29,7 +29,7 @@ $conn=mysqli_connect($servername,$username,$password,"$dbname");
       die('Could not Connect MySql Server:' .mysql_error());
     }
     
-    $query="select * from item_2"; 
+    $query="select * from item_allot"; 
     $result=mysqli_query($conn, $query); 
         
         
@@ -44,8 +44,8 @@ $conn=mysqli_connect($servername,$username,$password,"$dbname");
 		<tr> <td><?php echo $rows['wno']; ?></td> 
 		<td><?php echo $rows['item_no']; ?></td> 
 		<td><?php echo $rows['item_desc']; ?></td> 
-		<td><?php echo $rows['qty']; ?></td> 
-        <td><?php echo $rows['unit']; ?></td> 
+		<td><?php echo $rows['item_qty']; ?></td> 
+        <td><?php echo $rows['item_unit']; ?></td> 
 		</tr> 
 	<?php 
                } 
