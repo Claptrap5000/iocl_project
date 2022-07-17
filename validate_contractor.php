@@ -14,6 +14,6 @@ if($num == 1){
     header('location: Home/employee_home.html');
 }
 else{
-    header('location:employee_login_page.html');
+    header('location:new_emp_login.html');
 }
 ?>
