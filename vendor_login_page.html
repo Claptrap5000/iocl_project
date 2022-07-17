@@ -4,73 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style/login_style.css">
+    <title>Employee Login</title>
 </head>
 <body>
-    <header>
-        <h1>Login as Vendor</h1>
-    </header>
-    <section>
-        <div class="option">
-            <form action="validate_vendor.php" method="post">
-                <input type="text" name="vcode" placeholder="Enter Your Vendor Code">
-                <input type="password" name="password" placeholder="Enter Your Password">
-                <button type="submit">SUBMIT</button>
-            </form>
-            <!-- <a href="#"><button id="r_cd">Register as Contractor</button></a> -->
+    <div class="login-div">
+        <div class="logo">
+            <img src="style/logo.jpg" alt="" srcset="">
         </div>
-    </section>
+        <div class="tittle">Vendor Login</div>
+
+        <form action="validate_vendor.php" method="post">
+
+            <div class="fields">
+                <div class="username">
+                    <input type="text" class="user-input" name="vcode" placeholder="Enter Your Vendor ID">
+                </div>
+                <div class="username">
+                    <input type="password" class="pass-input" name="password" placeholder="Enter Your Password">
+                </div>
+            </div>
+            <button type="submit" class="signin-button">Login</button>
+
+        </form>
+    </div>
 </body>
-<style>
-    /* *{
-        background-color: rgb(73, 71, 71);
-        color: azure;
-    } */
-    header{
-        display: flex;
-        justify-content: center;
-        margin-top: 2em;
-    }
-    section{
-        display: flex;
-        justify-content: center;
-        position: relative;
-        margin-top: 3rem;
-    }
-    .option{
-        display: grid;
-        justify-content: center;
-        align-items: center;
-    }
-    form{
-        border: 2px solid black;
-        padding-top: 3em;
-        padding: 5em 3em 1em 3em;
-        display: grid;
-    }
-    button{
-        width: 20em;
-        padding: 2em;
-        margin: 2em;
-        margin-left: 5.4em;
-        /* border-radius: 8em; */
-        background-color: green;
-        color: aliceblue;
-    }
-    button:hover{
-        background-color: rgb(8, 69, 8);
-    }
-    input{
-        margin-bottom: 1rem;
-        padding: 2em 10em;
-    }
-    #r_cd{
-        width: 30em;
-        padding: 1em;
-        margin: 1em;
-        margin-left: 0.4em;
-        background-color: blue;
-    }
-    
-</style>
 </html>
