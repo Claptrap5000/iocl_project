@@ -14,13 +14,13 @@ if(isset($_POST['submit']))
    if (mysqli_query($con, $sql)) 
    {
       echo '<script>
-               location.replace("work_order.php");
+               location.replace("../Home/employee_home.html");
                alert("New record has been added successfully ");
             </script>';
      } else {
         echo "Error: " . $sql . ":-" . mysqli_error($con);
         echo '<script>
-               location.replace("work_order.php");
+               location.replace("../Home/employee_home.html");
                alert("Error foun in Your Entry!");
             </script>';
      }

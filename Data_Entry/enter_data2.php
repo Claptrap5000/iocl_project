@@ -13,13 +13,13 @@
         if (mysqli_query($con, $sql)) {
             // echo "New record has been added successfully !";
             echo '<script>
-               location.replace("enter_data.php");
+            location.replace("../Home/employee_home.html");
                alert("New record has been added successfully ");
             </script>';
         } else {
             echo "Error: " . $sql . ":-" . mysqli_error($con);
             echo '<script>
-               location.replace("enter_data.php");
+               location.replace("../Home/employee_home.html");
                alert("Error foun in Your Entry!");
             </script>';
         }
