@@ -4,8 +4,11 @@ body{
 
 header{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 1rem;
+    align-items: center;
+    /* margin-top: 1rem;
+    margin: auto; */
 }
 section{
     display: flex;

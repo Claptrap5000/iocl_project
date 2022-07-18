@@ -16,6 +16,17 @@
     <title>Item Allotment</title>
 </head>
 <body>
+<nav>
+        <label class="logo"><img src="../style/logo.jpg" alt="" srcset=""></label>
+        <label class="logo1"> IOCL</label>
+        <ul>
+            <li><a href="../item_allotment/item.php">Details Entry</a></li>
+            <li><a href="../Data_Entry/enter_data.php">Data Entry</a></li>
+            <li><a href="../Data_Entry/output.php">View Daily Entries</a></li>
+            <li><a href="../item_allotment/output.php">View Details</a></li>
+            <!-- <li><a href="">Feedback</a></li> -->
+        </ul>
+    </nav>
     <header>
         <h1>Item Allotment</h1>
     </header>
@@ -51,6 +62,48 @@
     </section>
 </body>
 <style>
+    *{
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+    }
+    nav{
+        background: blue;
+        height: 80px;
+        width: 100%;
+    }
+    label.logo1{
+        
+        background: blue;
+        color: aliceblue;
+        font-size: 35px;
+        line-height: 80px;
+        padding: 0 100px;
+        font-weight: bold;
+    }
+    nav ul{
+        float: right;
+        margin-right: 20px;
+    }
+    nav ul li{
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 9px;
+    }
+    nav ul li a{
+        color: aliceblue;
+        font-size: 17px;
+        text-transform: uppercase;
+    }
+
+img{
+    margin-top: 7px;
+    height: 60px;
+    width: 80px;
+    /* background-color:blue; */
+}
     
     form{
         padding: 4.5em 3em 1em 3em;
