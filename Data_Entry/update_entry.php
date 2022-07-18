@@ -18,6 +18,18 @@
     <title>Data Entry</title>
 </head>
 <body>
+<nav>
+        <label class="logo"><img src="../style/logo.jpg" alt="" srcset=""></label>
+        <label class="logo1"> IOCL</label>
+        <ul>
+            <li><a href="../item_allotment/item.php">Details Entry</a></li>
+            <li><a href="../Data_Entry/enter_data.php">Data Entry</a></li>
+            <li><a href="../Data_Entry/output.php">View Daily Entries</a></li>
+            <li><a href="../item_allotment/output.php">View Details</a></li>
+            <!-- <li><a href="">Feedback</a></li> -->
+        </ul>
+    </nav>
+
     <header>
         <h1>Data Entry</h1>
     </header>
@@ -36,7 +48,7 @@
         <!-- <form action="enter_data2.php" method="post"> -->
         <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
     
-            <label>Select Work ID</label>
+            <!-- <label>Select Work ID</label> -->
             
                 
                 <label>Enter Your Item No</label>

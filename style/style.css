@@ -1,6 +1,54 @@
 body{
-    background-color: rgb(200, 215, 215);
+    background: url('bg_iocl.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+    height: 100vh;
 }
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Ibarra Real Nova', serif;
+}
+nav{
+    background: blue;
+    height: 80px;
+    width: 100%;
+}
+label.logo1{
+    
+    background: blue;
+    color: aliceblue;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 9px;
+}
+nav ul li a{
+    color: aliceblue;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+img{
+margin-top: 7px;
+height: 60px;
+width: 80px;
+/* background-color:blue; */
+}   
+
 
 header{
     display: flex;
@@ -9,6 +57,10 @@ header{
     align-items: center;
     /* margin-top: 1rem;
     margin: auto; */
+}
+header h1{
+    font-size: 50px;
+    color: aliceblue;
 }
 section{
     display: flex;
