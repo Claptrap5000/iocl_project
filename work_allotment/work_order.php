@@ -26,6 +26,7 @@
             <li><a href="../Data_Entry/enter_data.php">Data Entry</a></li>
             <li><a href="../Data_Entry/output.php">View Daily Entries</a></li>
             <li><a href="../item_allotment/output.php">View Details</a></li>
+            <li><a href="../logout.php">Logout</a></li>
             <!-- <li><a href="">Feedback</a></li> -->
         </ul>
     </nav>
@@ -37,11 +38,11 @@
     <section>
         <div class="option">
             <form action="work_order2.php" method="post">
-                <input type="text" name="wno" placeholder="Enter Your Work ID">
+                <input type="text" pattern="[0-9]{8}" name="wno" required title="Invaild" placeholder="Enter Your Work ID">
 
                 <label>Select Your Employee ID</label>
             <div class="selection">
-                <select name="empno" id="sel_wno">
+                <select name="empno" id="sel_wno" required>
                         <?php
                             while ($category = mysqli_fetch_array(
                                 $all_categories,MYSQLI_ASSOC)):; 
@@ -55,9 +56,9 @@
                     <!-- <input type="text" name="empno" placeholder="Enter Your Emp No"> -->
             </div>
             
-                <label>Select Your Vendor Code</label>
+                <label>Select the Assigned Vendor for the Work</label>
             <div class="selection">
-                    <select name="vcode" id="sel_ino">
+                    <select name="vcode" id="sel_ino" required>
                         <?php
                             while ($category1 = mysqli_fetch_array(
                                 $new,MYSQLI_ASSOC)):; 
@@ -70,9 +71,9 @@
                     </select>
                     <!-- <input type="text" name="vcode" placeholder="Enter Your Vendor Code"> -->
                 </div>
-                <input type="text" name="des" placeholder="Enter Your Description">
+                <input type="text" name="des" placeholder="Enter The Work Description" required maxlength="120w">
                 <!-- <input type="date" name="entdate" id="" placeholder="Enter Entry Date"> -->
-                <input class="textbox-n" type="text" onfocus="(this.type = 'date')" name="entdate" placeholder="Enter Entry Date">
+                <input class="textbox-n" type="text" onfocus="(this.type = 'date')" name="entdate" placeholder="Enter Work Assigning Date" required>
                 <button type="submit" name="submit">SUBMIT</button>
                 <!-- need to change name attr -->
             </form>

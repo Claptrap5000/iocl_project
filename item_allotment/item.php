@@ -24,6 +24,7 @@
             <li><a href="../Data_Entry/enter_data.php">Data Entry</a></li>
             <li><a href="../Data_Entry/output.php">View Daily Entries</a></li>
             <li><a href="../item_allotment/output.php">View Details</a></li>
+            <li><a href="../logout.php">Logout</a></li>
             <!-- <li><a href="">Feedback</a></li> -->
         </ul>
     </nav>
@@ -50,10 +51,10 @@
                 </select>
                     <!-- <input type="text" name="wno" placeholder="WORK NO."> -->
             </div>
-                <input type="text" name="item_no" placeholder="ITEM NO.">
-                <input type="text" name="item_desc" placeholder="DESC">
-                <input type="text" name="item_qty" placeholder="QUANTITY">
-                <input type="text" name="item_unit" placeholder="UNIT">
+                <input required type="text" name="item_no" pattern="[0-9]{7,8}" placeholder="ITEM NO." required> 
+                <input required type="text" name="item_desc" placeholder="DESC" required>
+                <input required type="text" name="item_qty" placeholder="QUANTITY0" required>
+                <input required type="text" name="item_unit" placeholder="UNIT" required>
                 <button type="submit" name="submit">SUBMIT</button>
                 <!-- need to change name attr -->
             </form>
