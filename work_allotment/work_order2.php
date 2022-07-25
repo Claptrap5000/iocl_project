@@ -1,5 +1,6 @@
 <?php
 include_once '../db.php';
+
 if(isset($_POST['submit']))
 {    
     $wno = $_POST['wno'];
@@ -14,18 +15,16 @@ if(isset($_POST['submit']))
    if (mysqli_query($con, $sql)) 
    {
       echo '<script>
-               location.replace("../Home/employee_home.html");
+               location.replace("work_order.php");
                alert("New record has been added successfully ");
             </script>';
-     } else {
+   } else {
         echo "Error: " . $sql . ":-" . mysqli_error($con);
         echo '<script>
-               location.replace("../Home/employee_home.html");
+               location.replace("work_order.php");
                alert("Error foun in Your Entry!");
             </script>';
      }
      mysqli_close($con);
 }
 ?>
-
-

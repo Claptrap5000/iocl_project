@@ -12,7 +12,7 @@ $num = mysqli_num_rows($result);
 
 if($num == 1){
     echo '<script> 
-            location.replace("Home/vendor_home.html");
+            location.replace("Data_Entry/enter_data.php");
             alert("Login Successfull");
         </script>';
 }

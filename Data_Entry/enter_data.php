@@ -18,11 +18,25 @@
     <title>Data Entry</title>
 </head>
 <body>
+
+    <nav>
+        <label class="logo"><img src="../style/logo.jpg" alt="" srcset=""></label>
+        <label class="logo1"> IOCL</label>
+        <ul>
+            <li><a href="../item_allotment/item.php">Details Entry</a></li>
+            <li><a href="../Data_Entry/enter_data.php">Data Entry</a></li>
+            <li><a href="../Data_Entry/output.php">View Daily Entries</a></li>
+            <li><a href="../item_allotment/output.php">View Details</a></li>
+            <li><a href="../logout.php">Logout</a></li>
+            <!-- <li><a href="">Feedback</a></li> -->
+        </ul>
+    </nav>
+
     <header>
         <h1>Data Entry</h1>
     </header>
     <section>
-        <div class="option">
+    <div class="option">
 
             
         <form action="enter_data2.php" method="post">
@@ -69,7 +83,49 @@
         </div>
     </section>
 </body>
-<style>    
+<style> 
+*{
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+    }
+    nav{
+        background: blue;
+        height: 80px;
+        width: 100%;
+    }
+    label.logo1{
+        
+        background: blue;
+        color: aliceblue;
+        font-size: 35px;
+        line-height: 80px;
+        padding: 0 100px;
+        font-weight: bold;
+    }
+    nav ul{
+        float: right;
+        margin-right: 20px;
+    }
+    nav ul li{
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 9px;
+    }
+    nav ul li a{
+        color: aliceblue;
+        font-size: 17px;
+        text-transform: uppercase;
+    }
+
+img{
+    margin-top: 7px;
+    height: 60px;
+    width: 80px;
+    /* background-color:blue; */
+}   
     form{
         padding: 4.3rem 3rem 1rem 3rem;
     }

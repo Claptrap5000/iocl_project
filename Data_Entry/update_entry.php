@@ -18,6 +18,18 @@
     <title>Data Entry</title>
 </head>
 <body>
+<nav>
+        <label class="logo"><img src="../style/logo.jpg" alt="" srcset=""></label>
+        <label class="logo1"> IOCL</label>
+        <ul>
+            <li><a href="../item_allotment/item.php">Details Entry</a></li>
+            <li><a href="../Data_Entry/enter_data.php">Data Entry</a></li>
+            <li><a href="../Data_Entry/output.php">View Daily Entries</a></li>
+            <li><a href="../item_allotment/output.php">View Details</a></li>
+            <!-- <li><a href="">Feedback</a></li> -->
+        </ul>
+    </nav>
+
     <header>
         <h1>Data Entry</h1>
     </header>
@@ -26,7 +38,7 @@
 
         <?php
         $id = $_GET['id'];
-        $sql = "SELECT * FROM entry_table WHERE wno='{$id}'";
+        $sql = "SELECT * FROM entry_table WHERE sl_no='{$id}'";
         $result = mysqli_query($con, $sql) or die("Query Failed");
     
         if(mysqli_num_rows($result) > 0){
@@ -36,7 +48,7 @@
         <!-- <form action="enter_data2.php" method="post"> -->
         <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
     
-            <label>Select Work ID</label>
+            <!-- <label>Select Work ID</label> -->
             
                 
                 <label>Enter Your Item No</label>
@@ -76,15 +88,18 @@
         $dn_qty= $_POST['dn_qty'];
         $entry_date= $_POST['entry_date'];
 
-        $sql = "UPDATE entry_table SET item_no='$item_no', dn_qty='$dn_qty',entry_date='$entry_date' WHERE wno='$id'";
+        $sql = "UPDATE entry_table SET item_no='$item_no', dn_qty='$dn_qty',entry_date='$entry_date' WHERE sl_no='$id'";
      
         if (mysqli_query($con, $sql)) {
-            echo "New record has been added successfully !";
+            echo '<script>
+               location.replace("../Data_Entry/output.php");
+               alert("Data Added Successfully");
+            </script>';
             
         } else {
             echo "Error: " . $sql . ":-" . mysqli_error($con);
             echo '<script>
-               location.replace("../Home/employee_home.html");
+                location.replace("../Data_Entry/output.php");
                alert("Error foun in Your Entry!");
             </script>';
         }

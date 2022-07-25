@@ -14,7 +14,7 @@ if(isset($_POST['submit']))
      if (mysqli_query($con, $sql)) {
       //   echo "New record has been added successfully !";
         echo '<script>
-              location.replace("../Home/employee_home.html");
+              location.replace("../item_allotment/item.php");
               alert("New record has been added successfully ");
             </script>';
      } else {

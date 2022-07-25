@@ -26,8 +26,8 @@
 			  <th> Item No. </th> 
 			  <th> Qunatity Done </th> 
 			  <th> Entry Date </th>
-			  <th> Edit </th>
-			  <th> Delete </th>
+			  <th> Approval Status </th>
+			  <!-- <th> Delete </th> -->
 		</thead> 
 		
 		<tbody>
@@ -44,7 +44,7 @@
 				die('Could not Connect MySql Server:' .mysql_error());
 				}
 				
-			$query="select * from entry_table"; 
+			$query="select * from entry_table where status='0'"; 
 			$result=mysqli_query($conn, $query); 
 					
         
@@ -59,8 +59,15 @@
 			<td><?php echo $rows['item_no']; ?></td> 
 			<td><?php echo $rows['dn_qty']; ?></td> 
 			<td><?php echo $rows['entry_date']; ?></td> 
-			<td class='edit'><a href="update_entry.php?id=<?php echo $rows['sl_no'];?>"><i class='fa fa-edit'></i></a></td>
-			<td class='edit'><a href="delete_entry.php?id=<?php echo $rows['wno'];?>"><i class='fa fa-trash-o'></i></a></td>
+			<td class='edit'><?php  if( $rows['status'] == '2') 
+										echo "Approved" ; 
+									else if( $rows['status'] == '1') 	
+										echo "Amount Limit Reached" ; 
+										if( $rows['status'] == '0') 
+										echo "Not Approved" ; 
+									
+									?></td>
+			<!-- <td class='edit'><a href="delete_entry.php?id=<?php echo $rows['wno'];?>"><i class='fa fa-trash-o'></i></a></td> -->
 		</tr>
 
 		<?php   } ?> 
