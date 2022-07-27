@@ -44,7 +44,9 @@
 				die('Could not Connect MySql Server:' .mysql_error());
 				}
 				
-			$query="select * from entry_table where status='0'"; 
+
+
+			$query="select * from entry_table where status='2'"; 
 			$result=mysqli_query($conn, $query); 
 					
         
@@ -61,8 +63,7 @@
 			<td><?php echo $rows['entry_date']; ?></td> 
 			<td class='edit'><?php  if( $rows['status'] == '2') 
 										echo "Approved" ; 
-									else if( $rows['status'] == '1') 	
-										echo "Amount Limit Reached" ; 
+										 
 										if( $rows['status'] == '0') 
 										echo "Not Approved" ; 
 									

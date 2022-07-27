@@ -1,0 +1,1 @@
+SELECT * from item_allot INNER JOIN workallot ON item_allot.wno = workallot.wno where vcode = 'vendor1';
