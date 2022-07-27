@@ -26,6 +26,7 @@
             <li><a href="../Data_Entry/enter_data.php">Data Entry</a></li>
             <li><a href="../Data_Entry/output.php">View Daily Entries</a></li>
             <li><a href="../item_allotment/output.php">View Details</a></li>
+            <li><a href="../logout.php">Logout</a></li>
             <!-- <li><a href="">Feedback</a></li> -->
         </ul>
     </nav>

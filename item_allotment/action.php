@@ -1,10 +1,9 @@
 <?php
-
 $conn = new PDO('mysql:host=localhost;dbname=iocl','root' ,'');
-
+	
 foreach($_POST['wno_a'] as $key => $value)
 {
-    $sql = 'INSERT INTO item_2(wno, item_no , item_desc, qty, unit) VALUES( :wno, :item_no , :item_desc, :qty, :unit)';
+    $sql = 'INSERT INTO item_allot(wno, item_no , item_desc, item_qty, item_unit) VALUES( :wno, :item_no , :item_desc, :qty, :unit)';
     $stmt = $conn->prepare($sql);
     $stmt->execute([
         'wno'=> $value,

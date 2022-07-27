@@ -1,0 +1,120 @@
+body{
+    background: url('bg_iocl.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+    height: 100vh;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Ibarra Real Nova', serif;
+}
+nav{
+    background: blue;
+    height: 80px;
+    width: 100%;
+}
+label.logo1{
+    
+    background: blue;
+    color: aliceblue;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 9px;
+}
+nav ul li a{
+    color: aliceblue;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+img{
+margin-top: 7px;
+height: 60px;
+width: 80px;
+/* background-color:blue; */
+}   
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 1rem;
+    margin: auto; */
+}
+header h1{
+    font-size: 50px;
+    color: aliceblue;
+}
+section{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 1.8rem;
+    
+}
+.option{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    /* border: 2px solid black; */
+    padding: 3em 2em 1em 2em;
+    display: grid;
+    /* background-color: whitesmoke; */
+    /* background-color: floralwhite; */
+    /* background-color: rgb(231, 16, 16); */
+}
+button{
+    width: 20em;
+    padding: 2em;
+    margin: 2em;
+    margin-left: 5.4em;
+    background-color: green;
+    color: aliceblue;
+}
+button:hover{
+    background-color:orange;
+    color: black;
+}
+input{
+    margin-bottom: 1rem;
+    padding: 2em 10em;
+    background-color: whitesmoke;
+}
+#r_cd{
+    width: 30em;
+    padding: 1em;
+    margin: 1em;
+    margin-left: 0.4em;
+    background-color: blue;
+}
+label{
+    background-color: floralwhite;
+    margin: auto;
+}
+.selection{
+    background-color: floralwhite;
+}
+
+.select-items {
+    background-color: whitesmoke;
+    color: black;
+}

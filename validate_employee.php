@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include 'db.php';
 
 $empno = $_POST['empno'];
@@ -11,6 +11,7 @@ $result = mysqli_query($con, $s);
 $num = mysqli_num_rows($result);
 
 if($num == 1){
+    
     header('location: work_allotment/work_order.php');
 }
 else{

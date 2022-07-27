@@ -15,6 +15,7 @@
             <li><a href="../Data_Entry/enter_data.php">Data Entry</a></li>
             <li><a href="../Data_Entry/output.php">View Daily Entries</a></li>
             <li><a href="../item_allotment/output.php">View Details</a></li>
+			<li><a href="../logout.php">Logout</a></li>
             <!-- <li><a href="">Feedback</a></li> -->
         </ul>
     </nav>
@@ -33,6 +34,9 @@
 		<tbody>
 		<?php 
 
+			session_start();
+			$vcd  = $_SESSION['vcod'];
+
 			$servername='localhost';
 			$username='root';
 			$password='';
@@ -44,7 +48,7 @@
 				die('Could not Connect MySql Server:' .mysql_error());
 				}
 				
-			$query="select * from entry_table"; 
+			$query="SELECT * FROM (( entry_table INNER JOIN item_allot on entry_table.item_no = item_allot.item_no) INNER JOIN workallot ON entry_table.wno=workallot.wno) WHERE vcode = '$vcd'"; 
 			$result=mysqli_query($conn, $query); 
 					
         

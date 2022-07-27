@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include_once '../db.php';
     // include_once '../style/style.css';
     $sql_emp_no = 'SELECT * FROM employee';
@@ -18,18 +19,25 @@
     <title>Work Allotment</title>
 </head>
 <body>
-<nav>
-        <label class="logo"><img src="../style/logo.jpg" alt="" srcset=""></label>
-        <label class="logo1"> IOCL</label>
-        <ul>
-            <li><a href="../item_allotment/item.php">Details Entry</a></li>
-            <li><a href="../Data_Entry/enter_data.php">Data Entry</a></li>
-            <li><a href="../Data_Entry/output.php">View Daily Entries</a></li>
-            <li><a href="../item_allotment/output.php">View Details</a></li>
-            <li><a href="../logout.php">Logout</a></li>
-            <!-- <li><a href="">Feedback</a></li> -->
-        </ul>
-    </nav>
+
+    <div class="dropdwn">
+        <nav>
+            
+            <img src="../style/logo.jpg" class="logo">
+                
+            <ul>
+                <!-- <li><a href="#">Home</a></li> -->
+                <li><a href="#">View Item Orders</a>
+                    <ul>
+                        <li><a href="../Home/varified.php">Verified items Lists</a></li>
+                        <li><a href="../Home/unvarified.php">Un-verified items Lists</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Home/daily_entry.php">View Daily Entry</a></li>
+                <li><a href="../logout.php">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <header>
         <h1>Work Allotment</h1>
@@ -89,40 +97,72 @@
         list-style: none;
         box-sizing: border-box;
     }
-    nav{
-        background: blue;
-        height: 80px;
-        width: 100%;
+    img{
+        margin:0px;
+        margin-left:-4em;
     }
-    label.logo1{
-        
-        background: blue;
-        color: aliceblue;
-        font-size: 35px;
-        line-height: 80px;
-        padding: 0 100px;
-        font-weight: bold;
+    header{
+        margin-top:-1em;
     }
-    nav ul{
-        float: right;
-        margin-right: 20px;
-    }
-    nav ul li{
-        display: inline-block;
-        line-height: 80px;
-        margin: 0 9px;
-    }
-    nav ul li a{
-        color: aliceblue;
-        font-size: 17px;
-        text-transform: uppercase;
-    }
-
-img{
-    margin-top: 7px;
+    .dropdwn{
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+nav{
     height: 60px;
-    width: 80px;
-    /* background-color:blue; */
+    background: #2c3e50;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.logo{
+    padding: 5px 0 0 80px;
+    height: auto;
+    width: 9em;
+}
+
+nav ul{
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-right: 30px;
+}
+
+nav ul li{
+    background: #2c3e50;
+    position: relative;
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a{
+    display: block;
+    padding: 0 15px;
+    color: white;
+    text-decoration: none;
+    line-height: 60px;
+    font-size: 20px;
+}
+nav ul li a:hover{
+    background: #4b6988;
+    color: white;
+    text-decoration: none;
+}
+nav ul ul{
+    position: absolute;
+    top: 60px;
+    width: 100em;
+    display: none;
+    z-index: 100;
+}
+nav ul li:hover > ul{
+    display: block;
+}
+
+nav ul ul li{
+    width: auto;
+    max-width: 18em;
+    float: none;
+    display: list-item;
+    position: relative;
 }
     
     form{
@@ -138,13 +178,7 @@ img{
         margin-bottom :1em;
         background-color: white;
     }
-    /* label{
-        background-color: white;
-        margin: auto;
-    }
-    .selection{
-        background-color: white;
-    } */
+
 </style>
 <!-- CREATE TABLE workallot( wno varchar(25), empno varchar(25), vcode varchar(25), des varchar(255), PRIMARY KEY (wno), FOREIGN KEY (empno) REFERENCES employee(empno), FOREIGN KEY (vcode) REFERENCES vendor(vcode) ); -->
 
